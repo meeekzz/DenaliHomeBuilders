@@ -720,6 +720,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+  #portfolio #portfolio-flters li  {
+    padding: 5px 10px;
+  }
+}
+
 #portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
   background: rgb(224, 153, 21);
   color: #fff;
@@ -732,6 +738,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: auto;
   overflow: hidden !important;
   margin-bottom: 15px;
+  margin-left: 12%;
+  margin-right: auto;
   transition: all 350ms ease;
   transform: scale(1);
 
