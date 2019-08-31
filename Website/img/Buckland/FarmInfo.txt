@@ -1,0 +1,13 @@
+NAME:      Buckland
+ELEVATION: Farmhouse
+
+
+TOTAL HEATED SQ.FT: 1757
+MAIN LEVEL:         1757
+
+
+BEDROOMS:  3
+
+BATHROOMS: 2
+
+GARAGE: 2 Car
