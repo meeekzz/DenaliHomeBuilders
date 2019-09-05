@@ -1,0 +1,80 @@
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    grid-template-rows: 5% 55% 17% 3% 17% 3%;
+    background-image: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+}
+
+.mainImage {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start:2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+
+}
+
+.information {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start:3;
+    grid-row-end: 4;
+    justify-self: stretch;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-row-gap: 40px;
+}
+
+.sqft {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+
+}
+
+.bed{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+
+}
+
+.bath {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+
+}
+
+.description {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start:4;
+    grid-row-end: 6;
+    justify-self: stretch;
+    text-align: center;
+ 
+
+}
+
