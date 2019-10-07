@@ -1,5 +1,8 @@
 body {
     background: rgb(255, 255, 255);
+    max-width: 786px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
@@ -7,6 +10,7 @@ body {
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr;
     color: rgb(71, 65, 60);
+
 }
 
 .mySlides {
@@ -274,23 +278,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1, h2, h4{font-family: "Open Sans", sans-serif;}
 
 h1{
@@ -298,17 +285,24 @@ h1{
     font-size: 6vw;
     padding-left: 10px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    h1{
+        font-weight: 550; 
+        font-size: 50px;
+        padding-left: 10px;
+    }
+}
+
+
+
 i{color: rgb(94, 94, 94);font-size: 15px;}
 p h1 h4{color:black;}
 
 .fa-warehouse {
     font-size: 12px;
 }
-
-@media only screen and (min-width: 1200px) {
-
-}
-
 
 
 
