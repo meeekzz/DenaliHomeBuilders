@@ -295,10 +295,15 @@ h1{
     }
 }
 
-
-
 i{color: rgb(94, 94, 94);font-size: 15px;}
 p h1 h4{color:black;}
+
+@media only screen and (min-width: 1000px) {
+    h4{
+        font-size: 30px;
+
+    }
+}
 
 .fa-warehouse {
     font-size: 12px;
