@@ -23,8 +23,11 @@
   <link rel="stylesheet" href="css/w3.css">
 
   <!-- Main Stylesheet File -->
-  <link href="css/infoStyle.css" rel="stylesheet">
+  <link href="css/infoStyleTest.css"  media="screen" rel="stylesheet">
 
+  <!--Glide Slider-->
+  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 <body>
 
@@ -36,26 +39,27 @@
     <!--==========================
           Main Image Scroller
     ============================-->
-    <div class="w3-content" style="max-width:1200px">
-            <img class="mySlides" src="img/Grayling/GraylingFarm.jpg" style="width:100%; ">
-            <img class="mySlides center" src="img/Grayling/GraylingFarmFloor1.jpg" style="width:75%; display:none">
-            <img class="mySlides" src="img/Grayling/GraylingCraft1.jpeg" style="width:100%; display:none">
-          
-            <div class="w3-row-padding w3-section grid-3">
-              <div class="item-1-3">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="img/Grayling/GraylingFarm.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-              </div>
-              <div class="item-2-3">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="img/Grayling/GraylingFarmFloor1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-              </div>
-              <div class="item-3-3">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="img/Grayling/GraylingCraft1.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-              </div>
-            </div>
+    <div class="w3-content slideDiv" style="max-width:1200px">
+            <img class="mySlides" id="slide2" src="img/Grayling/GraylingFarm.jpg" style="width:100%;">
+            <img class="mySlides" id="slide1" src="img/Grayling/GraylingFarmFloor1.jpg" style="width:100%;">
+    </div>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides thumb">
+              <li class="glide__slide i1"><img class="responsive thumbs" src="img/Grayling/GraylingFarmFloor1.jpg "></li>
+              <li class="glide__slide i2"><img class="responsive thumbs" src="img/Grayling/GraylingFarm.jpg"></li>
+            </ul>
           </div>
 
+
+          <div class="glide__arrows" data-glide-el="controls">
+            <button onclick="changeImageDown()"class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+            <button onclick="changeImageUp()"class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+          </div>
+        </div>
+
     <div class="title" >
-      <h1>Grayling Farmhhouse</h1>
+      <h1>Grayling Farmhouse</h1>
     </div>
     
     <!--==========================
@@ -83,40 +87,69 @@
         <p><i class="fas fa-warehouse"></i> Car</p>
       </div>      
       
-  </div>
+    </div>
     <!--==========================
               Description
     ============================-->
     <div class="description">
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-    </div> 
+            <h4>These drawings are for illustration purposes only. All dimensions are aproximate and may reflect optional features.</h4>
+    </div>
   </div> <!--End Container-->
 
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <!-- Template Main Javascript File -->
   <script>
-   function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var btns = document.getElementsByTagName('button');
+  for(var i=0;i<btns.length;i++){
+      btns[i].addEventListener('click', function(){
+        disableButtons(true);
+        setTimeout(function(){disableButtons(false);}, 700);
+      });    
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  function disableButtons(state){
+      for(var i=0;i<btns.length;i++){
+        btns[i].disabled = !!state;    
+      }
   }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-}
+
+        let num = 2;
+        const string = "slide"
+
+    function changeImageUp(){
+        document.getElementById(string + num).style.display = 'none'; 
+        num++  
+        if(num>2){
+          num=1;
+          document.getElementById(string + num).style.display = 'block';
+        }
+        document.getElementById(string + num).style.display = 'block';
+
+      }
+
+    function changeImageDown(){
+      document.getElementById(string + num).style.display = 'none';
+      num --;
+      if(num===0){
+        num=2;
+        document.getElementById(string + num).style.display = 'block';
+      }
+        document.getElementById(string + num).style.display = 'block';
+    }
+
+
+    new Glide('.glide', {
+      type: 'carousel',
+      startAt: 0,
+      perView: 2,
+      gap: 10,
+      dragThreshold: false
+
+
+    }).mount();
   </script>
 
 
