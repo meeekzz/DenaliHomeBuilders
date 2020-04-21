@@ -41,13 +41,13 @@
     ============================-->
     <div class="w3-content slideDiv" style="max-width:1200px">
             <img class="mySlides" id="slide2" src="img/Buckland/BucklandCraft.jpg" style="width:100%;">
-            <img class="mySlides" id="slide1" src="img/Buckland/bucklandMainFloor.png" style="width:100%;">
+            <img class="mySlides" id="slide1" src="img/Buckland/bucklandMainFloor.png" style="width:75%;">
     </div>
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides thumb">
               <li class="glide__slide i1"><img class="responsive thumbs" src="img/Buckland/BucklandCraft.jpg"></li>
-              <li class="glide__slide i2"><img class="responsive thumbs" src="img/Buckland/bucklandMainFloor.png"></li>
+              <li class="glide__slide i2"><img class="responsive thumbs" src="img/Buckland/bucklandMainFloor.png" style="width:90%; padding-left:10%;" ></li>
             </ul>
           </div>
 
@@ -94,6 +94,8 @@
     <div class="description">
             <h4>These drawings are for illustration purposes only. All dimensions are aproximate and may reflect optional features.</h4>
     </div>
+
+    <button onClick="window.print()" class='printer'>Print Page</button>
   </div> <!--End Container-->
 
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
@@ -102,6 +104,12 @@
 
   <!-- Template Main Javascript File -->
   <script>
+
+$('.print').on('click', function() {  
+  window.print();  
+  return false; // why false?
+});
+
 
   var btns = document.getElementsByTagName('button');
   for(var i=0;i<btns.length;i++){

@@ -41,15 +41,21 @@
     ============================-->
     <div class="w3-content slideDiv" style="max-width:1200px">
             <img class="mySlides" id="slide2" src="img/Hemlock/Hemlock.jpg" style="width:100%;">
-            <img class="mySlides" id="slide1" src="img/Hemlock/HemlockFloor1.jpg" style="width:100%;">
-            <img class="mySlides" id="slide3" src="img/Hemlock/HemlockFloor2.jpg" style="width:100%;">
+            <img class="mySlides" id="slide1" src="img/Chat/chat1.jpeg" style="width:100%;">
+            <img class="mySlides" id="slide3" src="img/Chat/chat3.jpeg" style="width:100%;">
+            <img class="mySlides" id="slide4" src="img/Chat/chat5.jpg" style="width:100%;">
+            <img class="mySlides" id="slide5" src="img/Hemlock/HemlockFloor1.jpg" style="width:43%;">
+            <img class="mySlides" id="slide6" src="img/Hemlock/HemlockFloor2.jpg" style="width:48%;">
     </div>
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides thumb">
-              <li class="glide__slide i1"><img class="responsive thumbs" src="img/Hemlock/HemlockFloor1.jpg "></li>
-              <li class="glide__slide i2"><img class="responsive thumbs" src="img/Hemlock/Hemlock.jpg"></li>
-              <li class="glide__slide i3"><img class="responsive thumbs" src="img/Hemlock/HemlockFloor2.jpg"></li>
+              <li class="glide__slide i2"><img class="responsive thumbs" src="img/Chat/chat1.jpeg"></li>
+              <li class="glide__slide i1"><img class="responsive thumbs" src="img/Hemlock/Hemlock.jpg"></li>
+              <li class="glide__slide i3"><img class="responsive thumbs" src="img/Chat/chat3.jpeg"></li>
+              <li class="glide__slide i4"><img class="responsive thumbs" src="img/Chat/chat5.jpg"></li>
+              <li class="glide__slide i5"><img class="responsive thumbs" src="img/Hemlock/HemlockFloor1.jpg " style="width:60%; padding-left:20%;"></li>
+              <li class="glide__slide i6"><img class="responsive thumbs" src="img/Hemlock/HemlockFloor2.jpg" style="width:60%; padding-left:20%;"></li>
             </ul>
           </div>
 
@@ -93,6 +99,7 @@
     <div class="description">
             <h4>These drawings are for illustration purposes only. All dimensions are aproximate and may reflect optional features.</h4>
     </div>
+    <button onClick="window.print()" class='printer'>Print Page</button>
   </div> <!--End Container-->
 
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
@@ -121,7 +128,7 @@
     function changeImageUp(){
         document.getElementById(string + num).style.display = 'none'; 
         num++  
-        if(num>3){
+        if(num>6){
           num=1;
           document.getElementById(string + num).style.display = 'block';
         }
@@ -133,7 +140,7 @@
       document.getElementById(string + num).style.display = 'none';
       num --;
       if(num===0){
-        num=3;
+        num=6;
         document.getElementById(string + num).style.display = 'block';
       }
         document.getElementById(string + num).style.display = 'block';
