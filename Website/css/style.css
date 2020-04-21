@@ -142,11 +142,21 @@ h1 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: url(../img/homeImg.jpg) top center;
+  background: url(../img/Dill/Dill.png) top center;
   background-size: cover;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/homeImg.jpg) top center;
+    background-size: cover;
+    position: relative;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -190,6 +200,13 @@ h1 {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  #hero h1 {
+    font-size: 25px;
     line-height: 36px;
   }
 }
@@ -509,7 +526,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 350px;
-  background: url(../img/interior2.jpg) center top no-repeat;
+  background: url(../img/Chat/chat6.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -904,7 +921,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #333;
+  background: rgb(224, 153, 21);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -916,7 +933,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .social-links a:hover {
-  background: rgb(224, 153, 21);
+  background: #333;
   color: #fff;
 }
 

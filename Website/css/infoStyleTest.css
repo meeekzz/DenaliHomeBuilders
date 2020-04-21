@@ -35,6 +35,12 @@ body {
 #slide4 {
     display:none;
 }
+#slide5 {
+    display:none;
+}
+#slide6 {
+    display:none;
+}
 
 /* Glide Image Slide */
 
@@ -107,6 +113,7 @@ body {
 .glide button {
     pointer-events: auto;
 }
+
 .glide__slide img :hover{
     border: 1px solid turquoise ;
 }
@@ -273,6 +280,16 @@ body {
 
  
 }
+
+.printer{
+    width: 85px;
+    height: 30px;
+    background-color: #383838;
+    outline:0;
+    color: white;
+}
+
+
 
 
 h1, h2, h4{font-family: "Open Sans", sans-serif;}
