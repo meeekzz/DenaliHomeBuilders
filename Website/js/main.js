@@ -115,7 +115,7 @@ jQuery(document).ready(function ($) {
 
     setTimeout(function () {
       $(selectedFilter).fadeIn(100).css('transform', 'scale(1)');
-      $("#portfolio-wrapper").fadeTo(300, 1);
+      $("#portfolio-wrapper").fadeTo(400, 1);
     }, 300);
   });
 
@@ -125,6 +125,5 @@ jQuery(document).ready(function ($) {
     time: 1000
   });
 
-  // custom code
 
 });

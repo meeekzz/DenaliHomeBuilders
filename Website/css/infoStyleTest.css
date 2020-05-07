@@ -41,6 +41,21 @@ body {
 #slide6 {
     display:none;
 }
+#slide7 {
+    display:none;
+}
+#slide8 {
+    display:none;
+}
+#slide9 {
+    display:none;
+}
+#slide10 {
+    display:none;
+}
+#slide11 {
+    display:none;
+}
 
 /* Glide Image Slide */
 
@@ -283,11 +298,12 @@ body {
 
 .printer{
     width: 85px;
-    height: 45px;
+    height: 35px;
     background-color: #383838;
     outline:0;
     color: white;
 }
+
 
 
 

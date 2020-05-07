@@ -144,7 +144,7 @@ h1 {
 #hero {
   width: 100vw;
   height: 100vh;
-  background: url(../img/Dill/Dill.png) top center;
+  background: url(../img/Dill/Dill.jpg) top center;
   background-size: cover;
   position: relative;
 }
@@ -153,7 +153,7 @@ h1 {
   #hero {
     width: 100vw;
     height: 100vh;
-    background: url(../img/homeImg.jpg) top center;
+    background: url(../img/Dill/DillCraftInt6.jpg) top center;
     background-size: cover;
     position: relative;
   }
@@ -734,6 +734,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
 }
 
+#ambler{
+  padding-right:100px;
+}
 #portfolio #portfolio-flters li {
   cursor: pointer;
   margin: 0 10px;
