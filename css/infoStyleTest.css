@@ -1,0 +1,344 @@
+body {
+    background: rgb(255, 255, 255);
+    max-width: 786px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    color: rgb(71, 65, 60);
+
+}
+
+.mySlides {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right {
+    margin-left: 15px;
+}
+
+/* Images*/
+#slide1 {
+    display:none;
+}
+#slide2 {
+    display:inline;
+}
+#slide3 {
+    display:none;
+}
+#slide4 {
+    display:none;
+}
+#slide5 {
+    display:none;
+}
+#slide6 {
+    display:none;
+}
+#slide7 {
+    display:none;
+}
+#slide8 {
+    display:none;
+}
+#slide9 {
+    display:none;
+}
+#slide10 {
+    display:none;
+}
+#slide11 {
+    display:none;
+}
+
+/* Glide Image Slide */
+
+.glide {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-row: 1;
+}
+
+.glide__track {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.glide__track + .glide__arrows {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.glide__arrow--left {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.25em solid rgb(224, 153, 21);
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.glide__arrow--left:after {
+    content: '';
+	display: inline-block;
+    margin-top: 0em;
+    margin-left: 0.4em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid  rgb(224, 153, 21);
+    border-right: 0.5em solid  rgb(224, 153, 21);
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+
+.glide__arrow--right {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.25em solid rgb(224, 153, 21);
+    border-radius: 50%;
+    margin-left: 1.5em;
+}
+.glide__arrow--right:after {
+    content: '';
+    display: inline-block;
+    margin-top: 0em;
+    margin-left: -0.65em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid rgb(224, 153, 21);
+    border-right: 0.5em solid  rgb(224, 153, 21);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.glide {
+    pointer-events: none;
+}
+.glide button {
+    pointer-events: auto;
+}
+
+.glide__slide img :hover{
+    border: 1px solid turquoise ;
+}
+
+@media only screen and (max-width: 500px) {
+    .glide__arrow--right {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border: 0.25em solid rgb(224, 153, 21);
+        border-radius: 50%;
+        margin-left: 1.5em;
+    }
+    .glide__arrow--right:after {
+        content: '';
+        display: inline-block;
+        margin-top: 0em;
+        margin-left: -0.6em;
+        width: 1.4em;
+        height: 1.4em;
+        border-top: 0.5em solid rgb(224, 153, 21);
+        border-right: 0.5em solid  rgb(224, 153, 21);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .glide__arrow--left {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border: 0.25em solid rgb(224, 153, 21);
+        border-radius: 50%;
+        margin-right: 25px;
+    }
+    .glide__arrow--left:after {
+        content: '';
+        display: inline-block;
+        margin-top: 0em;
+        margin-left: -0.1em;
+        width: 1.4em;
+        height: 1.4em;
+        border-top: 0.5em solid  rgb(224, 153, 21);
+        border-right: 0.5em solid  rgb(224, 153, 21);
+        -moz-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+    
+
+  }
+
+/* Info for no Garage*/
+
+.information-3{
+
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 3px;
+
+}
+
+.sqft-3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+    font-family: "Poppins", sans-serif;
+}
+
+.bed-3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.bath-3{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Info with garage*/
+.information-4 {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 3px;
+}
+
+.sqft-4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+    font-family: "Poppins", sans-serif;
+}
+
+.bed-4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.bath-4{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    border-right: 1px solid black;
+    font-family: "Poppins", sans-serif;
+}
+
+.garage-4{
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start:1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.description {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start:4;
+    grid-row-end: 5;
+    justify-self: stretch;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+
+ 
+}
+
+.printer{
+    width: 85px;
+    height: 35px;
+    background-color: #383838;
+    outline:0;
+    color: white;
+}
+
+
+
+
+h1, h2, h4{font-family: "Open Sans", sans-serif;}
+
+h1{
+    font-weight: 550; 
+    font-size: 6vw;
+    padding-left: 10px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    h1{
+        font-weight: 550; 
+        font-size: 50px;
+        padding-left: 10px;
+    }
+}
+
+i{color: rgb(94, 94, 94);font-size: 15px;}
+p h1 h4{color:black;}
+
+@media only screen and (min-width: 1000px) {
+    h4{
+        font-size: 20px;
+
+    }
+}
+
+.fa-warehouse {
+    font-size: 12px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
