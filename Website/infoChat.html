@@ -42,20 +42,24 @@
     <div class="w3-content slideDiv" style="max-width:1200px">
             <img class="mySlides" id="slide2" src="img/Chat/chat01.jpg" style="width:100%;">
             <img class="mySlides" id="slide1" src="img/Chat/chat1.jpeg" style="width:100%;">
-            <img class="mySlides" id="slide3" src="img/Chat/chat3.jpeg" style="width:100%;">
-            <img class="mySlides" id="slide4" src="img/Chat/chat5.jpg" style="width:100%;">
-            <img class="mySlides" id="slide5" src="img/Chat/chatfloor1.jpg" style="width:62%;">
-            <img class="mySlides" id="slide6" src="img/Chat/chatfloor2.jpg" style="width:71%;">
+            <img class="mySlides" id="slide3" src="img/Chat/chat2.jpg" style="width:100%;">
+            <img class="mySlides" id="slide4" src="img/Chat/chat3.jpeg" style="width:100%;">
+            <img class="mySlides" id="slide5" src="img/Chat/chat5.jpeg" style="width:100%;">
+            <img class="mySlides" id="slide6" src="img/Chat/chat7.jpg" style="width:100%;">
+            <img class="mySlides" id="slide7" src="img/Chat/chatfloor1.jpg" style="width:62%;">
+            <img class="mySlides" id="slide8" src="img/Chat/chatfloor2.jpg" style="width:71%;">
     </div>
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides thumb">
               <li class="glide__slide i1"><img class="responsive thumbs" src="img/Chat/chat1.jpeg "></li>
               <li class="glide__slide i2"><img class="responsive thumbs" src="img/Chat/chat01.jpg"></li>
-              <li class="glide__slide i3"><img class="responsive thumbs" src="img/Chat/chat3.jpeg"></li>
-              <li class="glide__slide i4"><img class="responsive thumbs" src="img/Chat/chat5.jpg"></li>
-              <li class="glide__slide i5"><img class="responsive thumbs" src="img/Chat/chatfloor1.jpg" style="width:75%; padding-left: 10%"></li>
-              <li class="glide__slide i6"><img class="responsive thumbs" src="img/Chat/chatfloor2.jpg" style="width:80%; padding-left: 10%"></li>
+              <li class="glide__slide i3"><img class="responsive thumbs" src="img/Chat/chat2.jpg"></li>
+              <li class="glide__slide i4"><img class="responsive thumbs" src="img/Chat/chat3.jpeg"></li>
+              <li class="glide__slide i5"><img class="responsive thumbs" src="img/Chat/chat5.jpeg"></li>
+              <li class="glide__slide 6"><img class="responsive thumbs" src="img/Chat/chat7.jpg"></li>
+              <li class="glide__slide i7"><img class="responsive thumbs" src="img/Chat/chatfloor1.jpg" style="width:75%; padding-left: 10%"></li>
+              <li class="glide__slide i8"><img class="responsive thumbs" src="img/Chat/chatfloor2.jpg" style="width:80%; padding-left: 10%"></li>
             </ul>
           </div>
 
@@ -131,7 +135,7 @@
     function changeImageUp(){
         document.getElementById(string + num).style.display = 'none'; 
         num++  
-        if(num>6){
+        if(num>8){
           num=1;
           document.getElementById(string + num).style.display = 'block';
         }
@@ -143,7 +147,7 @@
       document.getElementById(string + num).style.display = 'none';
       num --;
       if(num===0){
-        num=6;
+        num=8;
         document.getElementById(string + num).style.display = 'block';
       }
         document.getElementById(string + num).style.display = 'block';
